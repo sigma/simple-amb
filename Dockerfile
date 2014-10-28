@@ -9,4 +9,4 @@ ADD forward.sh /usr/local/bin/forward.sh
 
 EXPOSE 10000
 
-CMD ["/usr/local/bin/forward.sh"]
+ENTRYPOINT ["/usr/local/bin/forward.sh"]
