@@ -1,3 +1,4 @@
 #!/bin/bash
 
-exec ncat --sh-exec "ncat `echo $1 | awk -F':' '{print $1, $2}'`" -l 10000 --keep-open
+ADDR=${1:-$FORWARD_ADDR}
+exec ncat --sh-exec "ncat `echo $ADDR | awk -F':' '{print $1, $2}'`" -l 10000 --keep-open
